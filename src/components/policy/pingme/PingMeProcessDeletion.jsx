@@ -248,8 +248,8 @@ const PingMeProcessDeletion = () => {
                )}
 
                {/* Main */}
-               <main className="flex flex-1 items-center justify-center px-4 py-12">
-                    <section className="w-full max-w-lg rounded-2xl border border-slate-200 bg-white p-7 shadow-sm sm:p-9">
+               <main className="flex flex-1 items-center justify-center px-2 md:px-4 py-12">
+                    <section className="w-full max-w-lg rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-9">
                          {/* Status Icon */}
                          <div
                               className={`mx-auto grid h-16 w-16 place-items-center rounded-2xl ${status === "completed"
