@@ -1,4 +1,5 @@
 import React from 'react'
+import PingMeFooter from "./PingMeFooter";
 
 function PolicySection({ id, title, children }) {
      return (
@@ -292,13 +293,8 @@ const PingMePolicyDetails = ({ sections, activeSection }) => {
                               </p>
                          </div>
                     </PolicySection>
-
-                    <div className="border-t border-slate-100 pt-8 text-xs leading-relaxed text-slate-400">
-                         This page is the privacy policy for PingMe. Keep it publicly
-                         accessible and update it whenever the app's data practices
-                         change.
-                    </div>
                </article>
+               <PingMeFooter />
           </>
      )
 }
