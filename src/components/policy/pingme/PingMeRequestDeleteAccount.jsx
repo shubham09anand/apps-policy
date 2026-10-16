@@ -94,7 +94,7 @@ const PingMeRequestDeleteAccount = () => {
 
           try {
                const response = await axios.post(
-                    `http://localhost:5000/api/v1/account-activity/request-account-deletion`,
+                    `https://apimessaging.shubham09anand.in/api/v1/account-activity/request-account-deletion`,
                     {
                          ...formData,
                          firstName: formData.firstName.trim(),

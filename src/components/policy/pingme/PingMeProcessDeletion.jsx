@@ -5,7 +5,7 @@ import { SvgIcons } from "../../../utils/SvgIcons";
 import PingMeHeader from "./PingMeHeader";
 import PingMeFooter from "./PingMeFooter";
 
-const API_URL = "http://localhost:5000/api/v1/account-activity";
+const API_URL = "https://apimessaging.shubham09anand.in/api/v1/account-activity";
 
 const PingMeProcessDeletion = () => {
      const [toast, setToast] = useState(null);
