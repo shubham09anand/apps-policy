@@ -168,26 +168,6 @@ export default function PingMePrivacyPolicy() {
                     )}
 
                </main>
-
-               {/* Footer */}
-               <footer className="border-t border-slate-200 bg-white">
-                    <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-                         <p>© 2026 PingMe.</p>
-
-                         <button
-                              type="button"
-                              onClick={() => {
-                                   window.scrollTo({
-                                        top: 0,
-                                        behavior: "smooth",
-                                   });
-                              }}
-                              className="font-medium text-slate-600 transition-colors hover:text-blue-600"
-                         >
-                              Back to top ↑
-                         </button>
-                    </div>
-               </footer>
           </div>
      );
 }

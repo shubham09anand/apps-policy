@@ -1,13 +1,32 @@
-import './App.css'
-import PingMePrivacyPolicy from './components/policy/pingme/PingMePrivacyPolicy'
+import './App.css';
+import { Routes, Route, Outlet } from 'react-router-dom';
+import PingMeProcessDeletion from './components/policy/pingme/PingMeProcessDeletion';
+import PingMePrivacyPolicy from './components/policy/pingme/PingMePrivacyPolicy';
+import PingMeRequestDeleteAccount from './components/policy/pingme/PingMeRequestDeleteAccount';
 
-function App() {
-
-	return (
-		<>
-			<PingMePrivacyPolicy />
-		</>
-	)
+function PingMeLayout() {
+	return <Outlet />;
 }
 
-export default App
+function App() {
+	return (
+		<Routes>
+			<Route path="/pingme" element={<PingMeLayout />}>
+				<Route
+					path="verify-deletion-request"
+					element={<PingMeProcessDeletion />}
+				/>
+				<Route
+					path="privacy-policy"
+					element={<PingMePrivacyPolicy />}
+				/>
+				<Route
+					path="ping-me-request-delete-account"
+					element={<PingMeRequestDeleteAccount />}
+				/>
+			</Route>
+		</Routes>
+	);
+}
+
+export default App;
