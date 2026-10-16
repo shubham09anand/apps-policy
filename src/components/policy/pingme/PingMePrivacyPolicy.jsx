@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import pingMe from '../../../assets/pingme.png';
 import { SvgIcons } from "../../../utils/SvgIcons";
-import Pingmescreenshot from "./pingmescreenshot";
+import Pingmescreenshot from "./Pingmescreenshot";
 import Permissions from './PingMePermissions';
 import PingMePolicyDetails from './PingMePolicyDetails';
 
