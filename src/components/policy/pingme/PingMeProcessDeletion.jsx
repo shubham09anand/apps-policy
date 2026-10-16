@@ -341,7 +341,7 @@ const PingMeProcessDeletion = () => {
                                                        Username
                                                   </p>
                                                   <p className="mt-1 break-words text-sm font-semibold text-slate-800">
-                                                       @{requestDetails.username}
+                                                       {requestDetails.username}
                                                   </p>
                                              </div>
 
