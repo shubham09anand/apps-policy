@@ -1,16 +1,25 @@
 import React, { useState } from 'react';
 import { SvgIcons } from '../../../utils/SvgIcons';
+import Home from '../../../assets/pingme/Home.jpeg';
+import Profile from '../../../assets/pingme/Profile.jpeg';
+import BlockedContacts from '../../../assets/pingme/Blocked Contacts.jpeg';
+import Downloads from '../../../assets/pingme/Downloads.jpeg';
+import Font from '../../../assets/pingme/Font.jpeg';
+import UpdateAddress from '../../../assets/pingme/Update Address.jpeg';
+import UpdateContact from '../../../assets/pingme/Update Contact.jpeg';
+import UpdateDetails from '../../../assets/pingme/Update Details.jpeg';
+import UpdatePassword from '../../../assets/pingme/Update Password.jpeg';
 
 const screenshots = [
-     { id: '1', title: 'Home', image: '/src/assets/pingme/Home.jpeg' },
-     { id: '2', title: 'Profile', image: '/src/assets/pingme/Profile.jpeg' },
-     { id: '3', title: 'Blocked Contacts', image: '/src/assets/pingme/Blocked Contacts.jpeg' },
-     { id: '4', title: 'Downloads', image: '/src/assets/pingme/Downloads.jpeg' },
-     { id: '5', title: 'Font', image: '/src/assets/pingme/Font.jpeg' },
-     { id: '6', title: 'Update Address', image: '/src/assets/pingme/Update Address.jpeg' },
-     { id: '7', title: 'Update Contact', image: '/src/assets/pingme/Update Contact.jpeg' },
-     { id: '8', title: 'Update Details', image: '/src/assets/pingme/Update Details.jpeg' },
-     { id: '9', title: 'Update Password', image: '/src/assets/pingme/Update Password.jpeg' },
+     { id: '1', title: 'Home', image: Home },
+     { id: '2', title: 'Profile', image: Profile },
+     { id: '3', title: 'Blocked Contacts', image: BlockedContacts },
+     { id: '4', title: 'Downloads', image: Downloads },
+     { id: '5', title: 'Font', image: Font },
+     { id: '6', title: 'Update Address', image: UpdateAddress },
+     { id: '7', title: 'Update Contact', image: UpdateContact },
+     { id: '8', title: 'Update Details', image: UpdateDetails },
+     { id: '9', title: 'Update Password', image: UpdatePassword },
 ];
 
 const Pingmescreenshot = () => {
