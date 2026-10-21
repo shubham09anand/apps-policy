@@ -9,6 +9,9 @@ import UpdateAddress from '../../../assets/pingme/Update Address.jpeg';
 import UpdateContact from '../../../assets/pingme/Update Contact.jpeg';
 import UpdateDetails from '../../../assets/pingme/Update Details.jpeg';
 import UpdatePassword from '../../../assets/pingme/Update Password.jpeg';
+import ConatactList from '../../../assets/pingme/Conatact List.jpeg';
+import ChatList from '../../../assets/pingme/Chat List.jpeg';
+import AttachmentOption from '../../../assets/pingme/Attachment Option.jpeg';
 
 const screenshots = [
      { id: '1', title: 'Home', image: Home },
@@ -20,7 +23,11 @@ const screenshots = [
      { id: '7', title: 'Update Contact', image: UpdateContact },
      { id: '8', title: 'Update Details', image: UpdateDetails },
      { id: '9', title: 'Update Password', image: UpdatePassword },
+     { id: '10', title: 'Contact List', image: ConatactList },
+     { id: '11', title: 'Chat List', image: ChatList },
+     { id: '12', title: 'Attachment Option', image: AttachmentOption },
 ];
+
 
 const Pingmescreenshot = () => {
      const [currentIndex, setCurrentIndex] = useState(0);
@@ -130,11 +137,10 @@ const Pingmescreenshot = () => {
                               type="button"
                               aria-label={`Show ${screenshot.title} screenshot`}
                               onClick={() => setCurrentIndex(index)}
-                              className={`h-2 rounded-full transition-all duration-300 ${
-                                   index === currentIndex
+                              className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex
                                         ? 'w-6 bg-blue-600'
                                         : 'w-2 bg-slate-400 hover:bg-slate-500'
-                              }`}
+                                   }`}
                          />
                     ))}
                </div>
