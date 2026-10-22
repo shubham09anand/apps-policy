@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
 import axios from "axios";
-import PingMetoast from "./PingMetoast";
+import PingMetoast from "./shared/PingMetoast";
 import { SvgIcons } from "../../../utils/SvgIcons";
-import PingMeHeader from "./PingMeHeader";
-import PingMeFooter from "./PingMeFooter";
+import PingMeHeader from "./shared/PingMeHeader";
+import PingMeFooter from "./shared/PingMeFooter";
 
 const API_URL = "https://apimessaging.shubham09anand.in/api/v1/account-activity";
 

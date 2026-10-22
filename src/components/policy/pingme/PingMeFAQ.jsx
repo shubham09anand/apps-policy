@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import PingMeFooter from "./PingMeFooter";
-import PingMeHeader from "./PingMeHeader";
+import PingMeFooter from "./shared/PingMeFooter";
+import PingMeHeader from "./shared/PingMeHeader";
 import { SvgIcons } from "../../../utils/SvgIcons";
 import { Link } from "react-router-dom";
+import PingMeBanner from "./shared/PingMeBanner";
 
 const faqData = [
      {
@@ -54,7 +55,7 @@ const faqData = [
           icon: "Trash",
           question: "Does uninstalling PingMe delete my account?",
           answer: "No. Uninstalling the app does not submit an account deletion request. Use the account deletion page to request deletion and follow the instructions sent to your registered email address.",
-          link: "/ping-me-request-delete-account",
+          link: "/pingme/ping-me-request-delete-account",
           linkText: "account deletion page",
      },
      {
@@ -62,7 +63,7 @@ const faqData = [
           icon: "Trash",
           question: "How do I request account deletion?",
           answer: "Visit the PingMe account deletion page and submit the requested account information. You'll receive an email with a confirmation link and further instructions after your request enters the verification process.",
-          link: "/ping-me-request-delete-account",
+          link: "/pingme/ping-me-request-delete-account",
           linkText: "account deletion page",
      },
      {
@@ -103,34 +104,31 @@ const PingMeFAQ = () => {
 
      const filteredFAQs = faqData.filter((faq) => {
           const matchesCategory =
-               activeCategory === "all" || faq.category === activeCategory;
+               activeCategory === "all" || faq?.category === activeCategory;
 
           const matchesSearch =
-               faq.question.toLowerCase().includes(search.toLowerCase()) ||
-               faq.answer.toLowerCase().includes(search.toLowerCase());
+               faq?.question.toLowerCase().includes(search.toLowerCase()) ||
+               faq?.answer.toLowerCase().includes(search.toLowerCase());
 
           return matchesCategory && matchesSearch;
      });
 
      return (
           <div className="min-h-screen bg-slate-50 text-slate-800 antialiased">
-               <PingMeHeader />
+               <PingMeBanner
+                    appName="PingMe"
+                    title="Frequently Asked Questions"
+                    description="Find answers to common questions about PingMe, including account setup, messaging, privacy, app permissions, troubleshooting, and account deletion."
+                    effectiveDate=""
+                    homeUrl="/"
+               />
 
                <section className="relative overflow-hidden border-b border-blue-100 bg-gradient-to-br from-blue-50 via-white to-blue-50 px-5 py-16 sm:py-20">
                     <div className="pointer-events-none absolute -right-24 -top-32 h-80 w-80 rounded-full bg-blue-200/40 blur-3xl" />
 
                     <div className="relative mx-auto max-w-3xl text-center">
-                         <span className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-xs font-bold uppercase tracking-widest text-blue-700">
-                              <span>✦</span>
-                              PingMe Help Center
-                         </span>
 
-                         <h1 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
-                              Frequently asked{" "}
-                              <span className="text-blue-600">questions.</span>
-                         </h1>
-
-                         <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
+                         <p className="mx-auto -mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
                               Quick answers about messaging, your account, privacy,
                               and keeping your PingMe experience secure.
                          </p>
@@ -195,12 +193,12 @@ const PingMeFAQ = () => {
                     {/* Questions */}
                     <div className="space-y-3">
                          {filteredFAQs.map((faq, index) => {
-                              const isOpen = openQuestion === faq.question;
+                              const isOpen = openQuestion === faq?.question;
                               const Icon = SvgIcons[faq?.icon];
 
                               return (
                                    <div
-                                        key={faq.question}
+                                        key={faq?.question}
                                         className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:border-blue-200"
                                    >
                                         <div className="flex">
@@ -209,7 +207,7 @@ const PingMeFAQ = () => {
                                                   aria-expanded={isOpen}
                                                   onClick={() =>
                                                        setOpenQuestion(
-                                                            isOpen ? null : faq.question
+                                                            isOpen ? null : faq?.question
                                                        )
                                                   }
                                                   className="flex w-full cursor-pointer items-center justify-between gap-5 p-5 py-3 text-left font-bold text-slate-800 sm:p-6 sm:py-3"
@@ -220,7 +218,7 @@ const PingMeFAQ = () => {
                                                                  <Icon size={20} h={20} w={20} sw={1.5} sc="white" />
                                                             </div>
                                                        }
-                                                       <div className={`w-54 sm:w-fit ${!isOpen && 'truncate'} overflow-hidden`}>{faq.question}</div>
+                                                       <div className={`w-54 my-auto sm:w-fit ${!isOpen && 'truncate'} overflow-hidden`}>{faq?.question}</div>
                                                   </div>
                                                   <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-full bg-blue-50 text-xl font-normal transition-transform ${isOpen ? "rotate-45" : ""}`}>
                                                        <SvgIcons.PlusSVG size={16} sc={'#0c97fb'} />
@@ -231,11 +229,11 @@ const PingMeFAQ = () => {
                                         {isOpen && (
                                              <div>
                                                   <div className="px-5 pb-6 -mt-3 text-sm leading-7 text-slate-600 sm:px-6">
-                                                       {faq.answer}
+                                                       {faq?.answer}
                                                        {faq?.link && (
                                                             <div className="mt-3">
                                                                  <Link
-                                                                      to={faq.link}
+                                                                      to={faq?.link}
                                                                       target="_blank"
                                                                       rel="noopener noreferrer"
                                                                       className="font-medium text-blue-600 hover:text-blue-700 hover:underline"

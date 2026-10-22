@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import PingMetoast from "./PingMetoast";
-import PingMeHeader from './PingMeHeader'
-import PingMeFooter from "./PingMeFooter";
+import PingMetoast from "./shared/PingMetoast";
+import PingMeHeader from './shared/PingMeHeader'
+import PingMeFooter from "./shared/PingMeFooter";
 import { SvgIcons } from '../../../utils/SvgIcons';
 
 const initialData = {

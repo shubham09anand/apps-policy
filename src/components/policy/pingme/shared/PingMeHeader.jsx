@@ -1,5 +1,5 @@
 import React from 'react'
-import pingMe from '../../../assets/pingme.png';
+import pingMe from '../../../../assets/pingme.png';
 
 const PingMeHeader = () => {
      return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import PingMeFooter from "./PingMeFooter";
+import PingMeFooter from "./shared/PingMeFooter";
 
 function PolicySection({ id, title, children }) {
      return (

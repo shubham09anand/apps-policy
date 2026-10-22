@@ -4,7 +4,8 @@ import { SvgIcons } from "../../../utils/SvgIcons";
 import Pingmescreenshot from "./Pingmescreenshot";
 import Permissions from './PingMePermissions';
 import PingMePolicyDetails from './PingMePolicyDetails';
-import PingMeFooter from "./PingMeFooter";
+import PingMeFooter from "./shared/PingMeFooter";
+import PingMeBanner from "./shared/PingMeBanner";
 
 const sections = [
      { id: "purpose", label: "Purpose", icon: SvgIcons.Info },
@@ -62,56 +63,14 @@ export default function PingMePrivacyPolicy() {
           <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-800 antialiased selection:bg-blue-500 selection:text-white">
 
                {/* Header */}
-               <header className="relative overflow-hidden bg-slate-950 text-white border-b border-slate-800/80">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.15),transparent_50%)]" />
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20" />
-
-                    <div className="relative mx-auto max-w-6xl px-6 py-16 sm:px-8 sm:py-24">
-                         <a
-                              href="/"
-                              aria-label="PingMe home"
-                              className="group inline-flex items-center gap-3 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-4 focus:ring-offset-slate-950"
-                         >
-                              <div className="group relative flex size-20 md:size-24 items-center justify-center">
-                                   {/* Moving glow behind the logo */}
-                                   <div className="absolute inset-[-8px] animate-[spin_5s_linear_infinite] rounded-full bg-[conic-gradient(from_0deg,transparent_0deg,#3b82f6_90deg,#60a5fa_140deg,transparent_200deg,transparent_360deg)] opacity-70 blur-xl" />
-
-                                   {/* Pulsing outer glow */}
-                                   <div className="absolute inset-0 rounded-2xl bg-blue-500/30 blur-lg animate-pulse" />
-
-                                   {/* Logo container */}
-                                   <div className="relative flex size-full items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white shadow-lg shadow-blue-500/20 transition-transform duration-200 group-hover:scale-105">
-                                        <img
-                                             src={pingMe}
-                                             alt="PingMe Logo"
-                                             className="h-full w-full object-contain p-1"
-                                        />
-                                   </div>
-                              </div>
-
-                              <span className="text-5xl md:text-8xl font-bold tracking-tight text-white">
-                                   Ping<span className="text-blue-400">me</span>
-                              </span>
-                         </a>
-
-                         <div className="mt-12 max-w-3xl">
-                              <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
-                                   Privacy Policy
-                              </h1>
-
-                              <p className="mt-6 text-lg leading-relaxed text-slate-300">
-                                   This policy explains what information PingMe may handle when you
-                                   use our messaging app, why it is used, and the choices available
-                                   to you.
-                              </p>
-
-                              <div className="mt-6 flex items-center gap-3 text-sm text-slate-400">
-                                   <span className="inline-block h-1 w-1 rounded-full bg-slate-500"></span>
-                                   Effective date: October 15, 2026
-                              </div>
-                         </div>
-                    </div>
-               </header>
+               <PingMeBanner
+                    appName="PingMe"
+                    title="Privacy Policy"
+                    description="Learn how PingMe handles your information, protects your privacy, and gives you control over your personal data."
+                    effectiveDate="October 15, 2026"
+                    logo={pingMe}
+                    homeUrl="/"
+               />
 
                {/* Main Content */}
                <main className="mx-auto max-w-6xl px-2 py-12 sm:px-8 sm:py-16">
@@ -134,8 +93,8 @@ export default function PingMePrivacyPolicy() {
                                         });
                                    }}
                                    className={`flex-1 rounded-lg cursor-pointer select-none px-6 py-3 text-sm font-semibold transition-colors ${activeTab === tab.id
-                                             ? "bg-blue-600 text-white shadow-sm"
-                                             : "text-slate-600 hover:bg-slate-100"
+                                        ? "bg-blue-600 text-white shadow-sm"
+                                        : "text-slate-600 hover:bg-slate-100"
                                         }`}
                               >
                                    {tab.label}
@@ -169,7 +128,7 @@ export default function PingMePrivacyPolicy() {
                     )}
 
                </main>
-               <PingMeFooter/>
+               <PingMeFooter />
           </div>
      );
 }
