@@ -4,7 +4,7 @@ const PingMetoast = ({ message, type = "success", onClose }) => {
      useEffect(() => {
           const timer = setTimeout(() => {
                onClose?.();
-          }, 5000);
+          }, 10000);
 
           return () => clearTimeout(timer);
      }, [onClose]);
