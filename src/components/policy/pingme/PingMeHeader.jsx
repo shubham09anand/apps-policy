@@ -5,7 +5,7 @@ const PingMeHeader = () => {
      return (
           <header className="border-b border-slate-200 bg-white">
                <div className="mx-auto w-[calc(100%-32px)] max-w-[960px]">
-                    <div className="flex items-center gap-3 py-4">
+                    <div className="flex items-center gap-2 py-0">
                          <img
                               src={pingMe}
                               alt="PingMe Logo"
@@ -13,12 +13,8 @@ const PingMeHeader = () => {
                          />
 
                          <div>
-                              <div className="text-xl font-extrabold text-slate-900">
+                              <div className="text-2xl md:text-3xl font-extrabold text-slate-900">
                                    Ping<span className="text-blue-600">Me</span>
-                              </div>
-
-                              <div className="mt-0.5 text-xs text-slate-500">
-                                   Account deletion
                               </div>
                          </div>
                     </div>

@@ -4,6 +4,7 @@ import { SvgIcons } from "../../../utils/SvgIcons";
 import Pingmescreenshot from "./Pingmescreenshot";
 import Permissions from './PingMePermissions';
 import PingMePolicyDetails from './PingMePolicyDetails';
+import PingMeFooter from "./PingMeFooter";
 
 const sections = [
      { id: "purpose", label: "Purpose", icon: SvgIcons.Info },
@@ -168,6 +169,7 @@ export default function PingMePrivacyPolicy() {
                     )}
 
                </main>
+               <PingMeFooter/>
           </div>
      );
 }

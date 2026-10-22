@@ -1,16 +1,11 @@
 import './App.css';
 import { useEffect } from 'react';
-import {
-	Routes,
-	Route,
-	Outlet,
-	Navigate,
-	useLocation,
-} from 'react-router-dom';
+import { Routes, Route, Outlet, Navigate, useLocation } from 'react-router-dom';
 
 import PingMeProcessDeletion from './components/policy/pingme/PingMeProcessDeletion';
 import PingMePrivacyPolicy from './components/policy/pingme/PingMePrivacyPolicy';
 import PingMeRequestDeleteAccount from './components/policy/pingme/PingMeRequestDeleteAccount';
+import PingMeFAQ from './components/policy/pingme/PingMeFAQ';
 
 function PingMeLayout() {
 	return <Outlet />;
@@ -83,6 +78,11 @@ function App() {
 					<Route
 						path="ping-me-request-delete-account"
 						element={<PingMeRequestDeleteAccount />}
+					/>
+
+					<Route
+						path="ping-me-faq"
+						element={<PingMeFAQ />}
 					/>
 				</Route>
 			</Routes>

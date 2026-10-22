@@ -8,6 +8,8 @@ import Font from '../../../assets/pingme/Font.jpeg';
 import UpdateAddress from '../../../assets/pingme/Update Address.jpeg';
 import UpdateContact from '../../../assets/pingme/Update Contact.jpeg';
 import UpdateDetails from '../../../assets/pingme/Update Details.jpeg';
+import AudioPLayer from '../../../assets/pingme/Audio PLayer.jpeg';
+import SendAttachement from '../../../assets/pingme/Send Attachement.jpeg';
 import UpdatePassword from '../../../assets/pingme/Update Password.jpeg';
 import ConatactList from '../../../assets/pingme/Conatact List.jpeg';
 import ChatList from '../../../assets/pingme/Chat List.jpeg';
@@ -16,6 +18,11 @@ import AttachmentOption from '../../../assets/pingme/Attachment Option.jpeg';
 const screenshots = [
      { id: '1', title: 'Home', image: Home },
      { id: '2', title: 'Profile', image: Profile },
+     { id: '10', title: 'Contact List', image: ConatactList },
+     { id: '11', title: 'Chat List', image: ChatList },
+     { id: '14', title: 'Send Files', image: SendAttachement },
+     { id: '13', title: 'Music Player', image: AudioPLayer },
+     { id: '12', title: 'Attachment Option', image: AttachmentOption },
      { id: '3', title: 'Blocked Contacts', image: BlockedContacts },
      { id: '4', title: 'Downloads', image: Downloads },
      { id: '5', title: 'Font', image: Font },
@@ -23,9 +30,6 @@ const screenshots = [
      { id: '7', title: 'Update Contact', image: UpdateContact },
      { id: '8', title: 'Update Details', image: UpdateDetails },
      { id: '9', title: 'Update Password', image: UpdatePassword },
-     { id: '10', title: 'Contact List', image: ConatactList },
-     { id: '11', title: 'Chat List', image: ChatList },
-     { id: '12', title: 'Attachment Option', image: AttachmentOption },
 ];
 
 
@@ -48,7 +52,6 @@ const Pingmescreenshot = () => {
 
      return (
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-b from-slate-100 to-slate-200 px-4 py-10 sm:px-8">
-               {/* Heading */}
                <div className="mb-8 text-center">
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
                          PingMe Preview
@@ -108,7 +111,7 @@ const Pingmescreenshot = () => {
                                    key={currentScreenshot.id}
                                    src={currentScreenshot.image}
                                    alt={`${currentScreenshot.title} screen in PingMe`}
-                                   className="block aspect-[9/19] select-none w-full bg-white object-cover object-top"
+                                   className="block aspect-[9/19] pb-5 select-none w-full bg-white object-cover object-top"
                               />
 
                               {/* Bottom navigation indicator */}
