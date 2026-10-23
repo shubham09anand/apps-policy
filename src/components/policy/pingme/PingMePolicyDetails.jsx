@@ -294,7 +294,6 @@ const PingMePolicyDetails = ({ sections, activeSection }) => {
                          </div>
                     </PolicySection>
                </article>
-               <PingMeFooter />
           </>
      )
 }
